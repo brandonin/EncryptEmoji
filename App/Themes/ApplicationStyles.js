@@ -32,18 +32,38 @@ const ApplicationStyles = {
       paddingVertical: Metrics.doubleBaseMargin,
       color: Colors.snow,
       marginVertical: Metrics.smallMargin,
-      textAlign: 'center'
+      textAlign: 'center',
+      fontSize: 42,
     },
     subtitle: {
       color: Colors.snow,
       padding: Metrics.smallMargin,
       marginBottom: Metrics.smallMargin,
-      marginHorizontal: Metrics.smallMargin
+      marginHorizontal: Metrics.smallMargin,
+      fontSize: 14,
     },
     titleText: {
       ...Fonts.style.h2,
       fontSize: 14,
       color: Colors.text
+    },
+    textMessage: {
+      borderColor: Colors.snow,
+      borderWidth: 1,
+      padding: 10,
+      width: 300,
+      minHeight: 100,
+      fontSize: 24,
+      color: Colors.snow,
+    },
+    textKey: {
+      marginTop: 10,
+      padding: 10,
+      borderColor: Colors.snow,
+      borderWidth: 1,
+      width: 300,
+      fontSize: 16,
+      color: Colors.snow,
     }
   },
   darkLabelContainer: {

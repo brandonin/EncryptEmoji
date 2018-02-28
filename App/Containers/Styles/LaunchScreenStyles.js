@@ -13,6 +13,7 @@ export default StyleSheet.create({
     resizeMode: 'contain'
   },
   centered: {
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: Metrics.doubleSection,
   }
 })
