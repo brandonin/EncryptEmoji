@@ -2,16 +2,15 @@ import React, {Component} from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
 import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
 import EncryptScreen from './EncryptScreen';
+import DecryptScreen from './DecryptScreen';
 
 const initialLayout = {
   height: 0,
   width: Dimensions.get('window').width,
 };
 
-// const FirstRoute = () => <View style={[ styles.container, { backgroundColor: '#ff4081' } ]} />;
-// const SecondRoute = () => <View style={[ styles.container, { backgroundColor: '#673ab7' } ]} />;
 const FirstRoute = () => <EncryptScreen />;
-const SecondRoute = () => <View style={[ styles.container, { backgroundColor: '#673ab7' } ]} />;
+const SecondRoute = () => <DecryptScreen />;
 
 export default class TabViewExample extends Component {
   state = {
@@ -39,6 +38,7 @@ export default class TabViewExample extends Component {
         renderScene={this._renderScene}
         renderHeader={this._renderHeader}
         onIndexChange={this._handleIndexChange}
+        onRequestChangeTab={this._handleIndexChange}
         initialLayout={initialLayout}
       />
     );
