@@ -11,6 +11,10 @@ const ApplicationStyles = {
       flex: 1,
       backgroundColor: Colors.backgroundEncrypt
     },
+    decryptContainer: {
+      flex: 1,
+      backgroundColor: Colors.backgroundDecrypt
+    },
     backgroundImage: {
       position: 'absolute',
       top: 0,

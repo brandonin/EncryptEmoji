@@ -136,19 +136,17 @@ export default class DecryptScreen extends Component {
   handleEncryptPress() {
     // First we need to turn Emojis into ASCII characters
     let letters = this.transformFromEmojiToLetters(this.state.message);
-    try {
-        var bytes = CryptoJS.AES.decrypt(letters, this.state.key);
-        var plainText = bytes.toString(CryptoJS.enc.Utf8);
-        this.setState({plainText});
-        this.setState({hidden: false});
-    }
+    var bytes = CryptoJS.AES.decrypt(letters, this.state.key);
+    var plainText = bytes.toString(CryptoJS.enc.Utf8);
+    this.setState({plainText});
+    this.setState({hidden: false});
   }
 
 
   render() {
     return (
-      <View style={styles.mainContainer} resizeMode='stretch'>
-        <ScrollView style={styles.container}>
+      <View style={styles.decryptContainer} resizeMode='stretch'>
+        <ScrollView style={styles.container} keyboardShouldPersistTaps='never'>
           <View style={styles.centered}>
             <Text style={styles.sectionText}>
               Encryption Emoji

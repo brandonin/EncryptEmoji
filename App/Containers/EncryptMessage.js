@@ -15,7 +15,9 @@ export default class EncryptMessage extends Component {
         <Text style={styles.subtitle}>
             {isEncryption}
         </Text>
-        <TextInput multiline={true} style={this.props.style} selectTextOnFocus={true} value={this.props.value}/>
+        <Text style={this.props.style} selectTextOnFocus={true} selectable={true}>
+            {this.props.value}
+        </Text>
       </View>
     )
   }

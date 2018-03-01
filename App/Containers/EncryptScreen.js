@@ -147,7 +147,7 @@ export default class EncryptScreen extends Component {
   render() {
     return (
       <View style={styles.mainContainer} resizeMode='stretch'>
-        <ScrollView style={styles.container}>
+        <ScrollView style={styles.container} keyboardShouldPersistTaps='never'>
           <View style={styles.centered}>
             <Text style={styles.sectionText}>
               Encryption Emoji
